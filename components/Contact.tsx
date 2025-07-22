@@ -256,7 +256,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="text-white font-semibold">{info.title}</h4>
-                      <p className="text-gray-400 text-sm">{info.details.slice(0,20)}</p>
+                      <p className="text-gray-400 text-sm">{info.details}</p>
                     </div>
                   </motion.a>
                 ))}
