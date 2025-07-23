@@ -71,8 +71,8 @@ You can deploy this portfolio easily on **Vercel**:
 
 ---
 
-## 📝 License
-This project is licensed under the [MIT License](LICENSE).
+## 📝 Vibe Coding.
+This project is done using **Macaly AI**.
 
 ---
 
