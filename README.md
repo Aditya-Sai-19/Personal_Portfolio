@@ -4,6 +4,10 @@ A modern and responsive personal portfolio website built with **Next.js**, **Rea
 This portfolio showcases projects, skills, and experiences with a clean and professional UI.
 
 ---
+[**View Live Demo**](https://aditya-sai-19-portfolio.vercel.app/)
+
+![Project Screenshot](https://raw.githubusercontent.com/Aditya-Sai-19/Personal_Portfolio/main/project-screenshot.png)
+---
 
 ## 🚀 Tech Stack
 - **Frontend:** Next.js 14, React, TypeScript
@@ -69,6 +73,10 @@ You can deploy this portfolio easily on **Vercel**:
    and output directory as `.next`.
 4. Deploy and enjoy your live portfolio!
 
+---
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE.md).
 ---
 
 ## 📝 Vibe Coding.
