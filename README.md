@@ -77,6 +77,7 @@ You can deploy this portfolio easily on **Vercel**:
 ## 📄 License
 
 This project is open-source and available under the [MIT License](LICENSE.md).
+
 ---
 
 ## 📝 Vibe Coding.
