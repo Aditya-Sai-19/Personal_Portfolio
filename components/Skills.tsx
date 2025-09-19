@@ -60,7 +60,7 @@ export default function Skills() {
 
   const tools = [
     'Google Colab', 'Coursera', 'Skillsoft', 'IBM Watson', 'Azure Cognitive Services',
-    'TensorFlow', 'PyTorch', 'Scikit-learn', 'Pandas', 'NumPy'
+    'TensorFlow', 'PyTorch', 'Scikit-learn', 'Pandas', 'NumPy','Seaborn','Matplotlib'
   ];
 
   return (
