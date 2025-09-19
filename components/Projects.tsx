@@ -29,7 +29,7 @@ export default function Projects() {
         "Classification algorithms implementation",
         "Model performance evaluation metrics",
       ],
-      link:'https://iris-classification-i93t.onrender.com'
+      link:'https://huggingface.co/spaces/Aditya-Sai-19/iris-classification-app'
     },
     {
       title: "House Price Prediction Model",
@@ -44,7 +44,7 @@ export default function Projects() {
         "Model evaluation and optimization",
         "Data visualization and insights",
       ],
-      link:'https://house-price-prediction-model-m340.onrender.com/'
+      link:'https://huggingface.co/spaces/Aditya-Sai-19/House_Price_Predictor'
     },
     {
       title: "Phishing URL Detection.",
