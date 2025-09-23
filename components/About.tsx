@@ -61,7 +61,7 @@ export default function About() {
                 The Journey
               </h3>
               <p className="text-gray-300 leading-relaxed" data-macaly="about-description">
-                I'm Kolapalli Aditya Sai, an aspiring Robotics and Cybersecurity enthusiast with a strong academic foundation in Computer Science and Engineering (AI & ML). Currently pursuing my B.Tech at Joginpally B R Engineering College, I've cultivated a passion for building intelligent systems that merge the physical and digital worlds.
+                I'm Kolapalli Aditya Sai, a Computer Science graduate specializing in Artificial Intelligence, Machine Learning. My journey is driven by a passion for building intelligent systems that bridge the physical and digital worlds, from developing secure infrastructures to pioneering robotic automation. With a strong foundation in Python and deep learning, I'm eager to contribute my problem-solving skills to innovative, tech-driven teams.
               </p>
             </div>
 
