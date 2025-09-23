@@ -59,8 +59,8 @@ export default function Skills() {
   ];
 
   const tools = [
-    'Google Colab', 'Coursera', 'Skillsoft', 'IBM Watson', 'Azure Cognitive Services','Streamlit',
-    'TensorFlow', 'PyTorch', 'Scikit-learn', 'Pandas', 'NumPy','Seaborn','Matplotlib','Langchain','LangFlow'
+    'Google Colab', 'Coursera', 'Skillsoft','GDB','GCC', 'IBM Watson', 'Azure Cognitive Services','Streamlit',
+    'TensorFlow', 'PyTorch', 'Scikit-learn', 'Pandas', 'NumPy','Seaborn','Matplotlib','Langchain','LangFlow','N8N'
   ];
 
   return (
