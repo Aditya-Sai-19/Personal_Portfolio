@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, Download, Box } from 'lucide-react';
+import { Github, Linkedin, Mail, Download, Box, Instagram } from 'lucide-react';
 
 export default function Hero() {
   const [displayText, setDisplayText] = useState('');
@@ -23,6 +23,7 @@ export default function Hero() {
     { icon: Linkedin, href: 'https://linkedin.com/in/aditya-sai-3317702a6', label: 'LinkedIn' },
     { icon: Mail, href: 'mailto:workingprofessional19@outlook.com', label: 'Email' },
     { icon: Box, href: 'https://huggingface.co/Aditya-Sai-19', label: 'Hugging Face' }
+    { icon: Instagram, href: 'https://www.instagram.com/magnum_opus_prolix/', label: 'Instagram' }
   ];
 
   return (
