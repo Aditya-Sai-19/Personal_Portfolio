@@ -10,7 +10,7 @@ import {
   Brain,
   Home,
   Bot,
-  Link,
+  link,
   Code,
   Link,
 } from "lucide-react";
@@ -58,7 +58,7 @@ export default function Projects() {
         "Cybersecurity",
         "Data Analysis",
       ],
-      icon: Link,
+      icon: link,
       gradient: "from-cosmic-orange to-orange-500",
       features: [
         "High accuracy up to 96.9% using Random Forest, KNN, Logistic Regression, and Naive Bayes",
