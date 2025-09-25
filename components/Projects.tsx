@@ -6,7 +6,7 @@ import {
   ExternalLink,
   Github,
   Database,
-  Scroll,
+  Filesearch,
   Brain,
   Home,
   Bot,
@@ -73,7 +73,7 @@ export default function Projects() {
   description:
     "Developed and deployed a semantic search app that finds the most relevant document about a cricketer using text embeddings and natural language queries.",
   tech: ["LangChain", "Google Generative AI", "Gradio", "Hugging Face", "Python", "Semantic Search"],
-  icon: Scroll, // Or another icon like Search, MessagesSquare
+  icon: Filesearch, // Or another icon like Search, MessagesSquare
   gradient: "from-green-400 to-blue-500",
   features: [
     "End-to-end AI application deployment on Hugging Face",
