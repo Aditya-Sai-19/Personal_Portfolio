@@ -22,7 +22,7 @@ export default function Hero() {
     { icon: Github, href: 'https://github.com/Aditya-Sai-19', label: 'GitHub' },
     { icon: Linkedin, href: 'https://linkedin.com/in/aditya-sai-3317702a6', label: 'LinkedIn' },
     { icon: Mail, href: 'mailto:workingprofessional19@outlook.com', label: 'Email' },
-    { icon: Box, href: 'https://huggingface.co/Aditya-Sai-19', label: 'Hugging Face' }
+    { icon: Box, href: 'https://huggingface.co/Aditya-Sai-19', label: 'Hugging Face' },
     { icon: Instagram, href: 'https://www.instagram.com/magnum_opus_prolix/', label: 'Instagram' }
   ];
 
