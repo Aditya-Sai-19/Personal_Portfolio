@@ -6,6 +6,7 @@ import {
   ExternalLink,
   Github,
   Database,
+  Scroll,
   Brain,
   Home,
   Bot,
@@ -67,6 +68,21 @@ export default function Projects() {
       ],
       link:''
     },
+    {
+  title: "Cricket Document Similarity Search",
+  description:
+    "Developed and deployed a semantic search app that finds the most relevant document about a cricketer using text embeddings and natural language queries.",
+  tech: ["LangChain", "Google Generative AI", "Gradio", "Hugging Face", "Python", "Semantic Search"],
+  icon: Scroll, // Or another icon like Search, MessagesSquare
+  gradient: "from-green-400 to-blue-500",
+  features: [
+    "End-to-end AI application deployment on Hugging Face",
+    "Interactive web UI built with Gradio",
+    "Semantic search implementation using text embeddings",
+    "Utilizes LangChain for orchestrating AI logic",
+  ],
+  link: 'https://huggingface.co/spaces/Aditya-Sai-19/cricket_similarity_search'
+},
     {
       title:
         "Fake Review Detection",
