@@ -7,7 +7,7 @@ import {
   Github,
   Database,
   FileSearch,
-  Brain,
+  Flower2,
   Home,
   Bot,
   Link2,
@@ -22,7 +22,7 @@ export default function Projects() {
       description:
         "Built a supervised machine learning model to classify iris flower species based on petal and sepal dimensions using Python and Scikit-learn.",
       tech: ["Python", "Scikit-learn", "Machine Learning", "Data Analysis"],
-      icon: Brain,
+      icon: Flower2,
       gradient: "from-electric-cyan to-blue-500",
       features: [
         "High accuracy using decision trees and logistic regression",
