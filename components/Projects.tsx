@@ -9,7 +9,7 @@ import {
   FileSearch,
   Flower2,
   Home,
-  Bot,
+  BrainCircuit,
   Link2,
   Code,
   Link,
@@ -97,7 +97,7 @@ export default function Projects() {
         "Fuzzy Logic",
         "Natural Language Processing",
       ],
-      icon: Bot,
+      icon: BrainCircuit,
       gradient: "from-stellar-yellow to-yellow-500",
       features: [
         "Real-time review analysis with sentiment classification via CNN",
