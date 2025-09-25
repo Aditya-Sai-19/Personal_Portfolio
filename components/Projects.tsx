@@ -66,7 +66,7 @@ export default function Projects() {
         "Comparative analysis of multiple classification algorithms",
         "Evaluation using precision, recall, F1-score, and confusion matrix",
       ],
-      link:''
+      link:'https://huggingface.co/spaces/Aditya-Sai-19/PHISHING-URL-DETECTION'
     },
     {
   title: "Cricket Document Similarity Search",
