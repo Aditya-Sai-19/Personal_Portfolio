@@ -7,6 +7,15 @@ import { Award, Calendar, ExternalLink, CheckCircle } from 'lucide-react';
 export default function Certifications() {
   const certifications = [
     {
+  name: 'Oracle Cloud Infrastructure 2025 Certified Generative AI Professional',
+  platform: 'Oracle',
+  date: 'October 2025',
+  category: 'AI/Cloud',
+  color: 'from-blue-500 to-cyan-400',
+  description: 'Certification demonstrating expertise in Oracle Cloud Infrastructure and Generative AI services',
+  link: 'https://catalog-education.oracle.com/pls/certview/sharebadge?id=0BC5481C6D8F23D8372FE1FDE216279DEE629D205BFAF74BBBF0AA1A7E848A93'
+},
+{
       name: 'Automation Design & Robotics',
       platform: 'Skillsoft',
       date: 'June 2024',
