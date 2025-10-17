@@ -122,14 +122,14 @@ export default function Certifications() {
   'Robotics': 'text-stellar-yellow',
   'Design': 'text-neon-purple',
   'Marketing': 'text-nebula-pink',
-  'AI/Cloud': 'text-nebula-pink' // Added color for AI/Cloud
+  'AI/Cloud': 'text-nebula-pink' 
 };
 
 
   const stats = [
-    { number: '11+', label: 'Certifications', color: 'electric-cyan' },
+    { number: '12+', label: 'Certifications', color: 'electric-cyan' },
     { number: '5+', label: 'Platforms', color: 'neon-purple' },
-    { number: '2024', label: 'Most Recent', color: 'cosmic-orange' },
+    { number: '2025', label: 'Most Recent', color: 'cosmic-orange' },
     { number: '5+', label: 'Categories', color: 'stellar-yellow' }
   ];
 
