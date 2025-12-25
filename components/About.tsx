@@ -103,30 +103,32 @@ export default function About() {
         </div>
 
         {/* Education section */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-electric-cyan/10 to-neon-purple/10 backdrop-blur-sm border border-electric-cyan/20 rounded-xl p-8 max-w-2xl mx-auto">
-            <GraduationCap className="w-16 h-16 text-electric-cyan mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-white mb-4">Education</h3>
-            <p className="text-gray-300 text-lg">
-              <strong>B.Tech in Computer Science and Engineering (AI & ML)</strong>
-            </p>
-            <p className="text-electric-cyan font-semibold">Joginpally B R Engineering College</p>
-            <p className="text-gray-400 mt-2">Specializing in Artificial Intelligence and Machine Learning</p>
-          </div>
-        </div>
+<div className="mt-16 text-center">
+  <div className="bg-gradient-to-r from-electric-cyan/10 to-neon-purple/10 backdrop-blur-sm border border-electric-cyan/20 rounded-xl p-8 max-w-2xl mx-auto">
+    <GraduationCap className="w-16 h-16 text-electric-cyan mx-auto mb-4" />
+    <h3 className="text-2xl font-bold text-white mb-4">Education</h3>
+    <p className="text-gray-300 text-lg">
+      <strong>B.Tech in Computer Science and Engineering (AI & ML)</strong>
+    </p>
+    <p className="text-electric-cyan font-semibold">Joginpally B R Engineering College</p>
+    <p className="text-gray-400 mt-1">2021 - 2025</p>
+    <p className="text-gray-400">Specializing in Artificial Intelligence and Machine Learning</p>
+  </div>
+</div>
 
-        {/* Work Experience section */}
-        <div className="mt-12 text-center">
-          <div className="bg-gradient-to-r from-electric-cyan/10 to-neon-purple/10 backdrop-blur-sm border border-electric-cyan/20 rounded-xl p-8 max-w-2xl mx-auto">
-            <Briefcase className="w-16 h-16 text-electric-cyan mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-white mb-4">Work Experience</h3>
-            <p className="text-gray-300 text-lg">
-              <strong>AI Engineer</strong>
-            </p>
-            <p className="text-electric-cyan font-semibold">Kodryx AI</p>
-            <p className="text-gray-400 mt-2">Developing cutting-edge AI solutions and machine learning models for innovative applications</p>
-          </div>
-        </div>
+{/* Work Experience section */}
+<div className="mt-12 text-center">
+  <div className="bg-gradient-to-r from-electric-cyan/10 to-neon-purple/10 backdrop-blur-sm border border-electric-cyan/20 rounded-xl p-8 max-w-2xl mx-auto">
+    <Briefcase className="w-16 h-16 text-electric-cyan mx-auto mb-4" />
+    <h3 className="text-2xl font-bold text-white mb-4">Work Experience</h3>
+    <p className="text-gray-300 text-lg">
+      <strong>AI Engineer</strong>
+    </p>
+    <p className="text-electric-cyan font-semibold">Kodryx AI</p>
+    <p className="text-gray-400 mt-1">2025 - Present</p>
+    <p className="text-gray-400">Developing cutting-edge AI solutions and machine learning models for innovative applications</p>
+  </div>
+</div>
       </div>
     </section>
   );

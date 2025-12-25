@@ -1,23 +1,43 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
+
+type Particle = {
+  id: number;
+  left: string;
+  top: string;
+  duration: string;
+  delay: string;
+};
 
 export default function Loader() {
   const [activeHex, setActiveHex] = useState(0);
   const [connectionProgress, setConnectionProgress] = useState(0);
+  const [isClient, setIsClient] = useState(false);
 
   const hexGrid = Array.from({ length: 19 }, (_, i) => i);
 
+  // Generate particles only on client side
+  const particles = useMemo(() => {
+    if (!isClient) return [];
+    return Array.from({ length: 30 }, (_, i) => ({
+      id: i,
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+      duration: `${5 + Math.random() * 10}s`,
+      delay: `${Math.random() * 5}s`
+    }));
+  }, [isClient]);
+
   useEffect(() => {
+    setIsClient(true);
+    
     const hexInterval = setInterval(() => {
       setActiveHex(prev => (prev + 1) % hexGrid.length);
     }, 200);
 
     const progressInterval = setInterval(() => {
-      setConnectionProgress(prev => {
-        if (prev >= 100) return 100;
-        return prev + 2;
-      });
+      setConnectionProgress(prev => (prev >= 100 ? 100 : prev + 2));
     }, 40);
 
     return () => {
@@ -34,15 +54,15 @@ export default function Loader() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 flex items-center justify-center overflow-hidden">
       {/* Animated background particles */}
       <div className="absolute inset-0">
-        {[...Array(30)].map((_, i) => (
+        {particles.map((particle) => (
           <div
-            key={i}
+            key={particle.id}
             className="absolute w-1 h-1 bg-blue-400 rounded-full opacity-50"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animation: `float ${5 + Math.random() * 10}s linear infinite`,
-              animationDelay: `${Math.random() * 5}s`
+              left: particle.left,
+              top: particle.top,
+              animation: `float ${particle.duration} linear infinite`,
+              animationDelay: particle.delay
             }}
           />
         ))}
