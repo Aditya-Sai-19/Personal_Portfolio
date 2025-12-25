@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, Download, Boxes, Instagram } from 'lucide-react';
+import { THEME, SOCIAL_LINKS } from '@/constants/theme';
 
 export default function Hero() {
   const [displayText, setDisplayText] = useState('');
@@ -13,17 +14,17 @@ export default function Hero() {
       const timeout = setTimeout(() => {
         setDisplayText(prev => prev + fullText[currentIndex]);
         setCurrentIndex(prev => prev + 1);
-      }, 150);
+      }, THEME.animation.typewriterSpeed);
       return () => clearTimeout(timeout);
     }
   }, [currentIndex, fullText]);
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/Aditya-Sai-19', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com/in/aditya-sai-3317702a6', label: 'LinkedIn' },
-    { icon: Mail, href: 'mailto:workingprofessional19@outlook.com', label: 'Email' },
-    { icon: Boxes, href: 'https://huggingface.co/Aditya-Sai-19', label: 'Hugging Face' },
-    { icon: Instagram, href: 'https://www.instagram.com/magnum_opus_prolix/', label: 'Instagram' }
+    { icon: Github, href: SOCIAL_LINKS.github, label: 'GitHub' },
+    { icon: Linkedin, href: SOCIAL_LINKS.linkedin, label: 'LinkedIn' },
+    { icon: Mail, href: SOCIAL_LINKS.email, label: 'Email' },
+    { icon: Boxes, href: SOCIAL_LINKS.huggingface, label: 'Hugging Face' },
+    { icon: Instagram, href: SOCIAL_LINKS.instagram, label: 'Instagram' }
   ];
 
   return (

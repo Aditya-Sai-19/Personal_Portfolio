@@ -2,6 +2,11 @@
 
 import { useEffect, useRef } from 'react';
 
+const CANVAS_BOUNDS = 2000;
+const HALF_CANVAS_BOUNDS = CANVAS_BOUNDS / 2;
+const STAR_SPEED = 0.5;
+const NUM_STARS = 800;
+
 export default function StarField() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -9,18 +14,17 @@ export default function StarField() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
     if (!ctx) return;
 
     const stars: Array<{ x: number; y: number; z: number; prevZ: number }> = [];
-    const numStars = 800;
-    const speed = 0.5;
+    let animationFrameId: number;
 
     // Initialize stars
-    for (let i = 0; i < numStars; i++) {
+    for (let i = 0; i < NUM_STARS; i++) {
       stars.push({
-        x: Math.random() * 2000 - 1000,
-        y: Math.random() * 2000 - 1000,
+        x: Math.random() * CANVAS_BOUNDS - HALF_CANVAS_BOUNDS,
+        y: Math.random() * CANVAS_BOUNDS - HALF_CANVAS_BOUNDS,
         z: Math.random() * 1000,
         prevZ: Math.random() * 1000,
       });
@@ -43,11 +47,11 @@ export default function StarField() {
 
       stars.forEach((star) => {
         star.prevZ = star.z;
-        star.z -= speed;
+        star.z -= STAR_SPEED;
 
         if (star.z <= 0) {
-          star.x = Math.random() * 2000 - 1000;
-          star.y = Math.random() * 2000 - 1000;
+          star.x = Math.random() * CANVAS_BOUNDS - HALF_CANVAS_BOUNDS;
+          star.y = Math.random() * CANVAS_BOUNDS - HALF_CANVAS_BOUNDS;
           star.z = 1000;
           star.prevZ = 1000;
         }
@@ -74,14 +78,17 @@ export default function StarField() {
         ctx.fill();
       });
 
-      requestAnimationFrame(animate);
+      animationFrameId = requestAnimationFrame(animate);
     }
 
     resizeCanvas();
     animate();
 
     window.addEventListener('resize', resizeCanvas);
-    return () => window.removeEventListener('resize', resizeCanvas);
+    return () => {
+      window.removeEventListener('resize', resizeCanvas);
+      cancelAnimationFrame(animationFrameId);
+    };
   }, []);
 
   return (

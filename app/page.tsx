@@ -9,6 +9,8 @@ import Skills from '@/components/Skills';
 import Certifications from '@/components/Certifications';
 import Contact from '@/components/Contact';
 import StarField from '@/components/StarField';
+import Loader from '@/components/Loader';
+import { THEME } from '@/constants/theme';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -16,20 +18,13 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, THEME.animation.loadingDelay);
 
     return () => clearTimeout(timer);
   }, []);
 
   if (isLoading) {
-    return (
-      <div className="min-h-screen bg-space-blue flex  w-screen items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full md:h-32 md:w-32 h-20 md:ml-0 ml-[20vw] w-20 border-t-2 border-electric-cyan mb-4"></div>
-          <p className="text-electric-cyan text-xl font-mono">Initializing System...</p>
-        </div>
-      </div>
-    );
+    return <Loader />;
   }
 
   return (
