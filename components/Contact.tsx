@@ -91,7 +91,7 @@ export default function Contact() {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-electric-cyan to-neon-purple mx-auto mb-8"></div>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            Ready to collaborate on exciting projects? Let's connect and build something amazing together!
+            Ready to collaborate on exciting projects? Let us connect and build something amazing together!
           </p>
         </motion.div>
 
@@ -229,9 +229,9 @@ export default function Contact() {
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:border-electric-cyan/50 transition-all duration-300">
               <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
               <p className="text-gray-300 mb-8 leading-relaxed">
-                I'm always excited to discuss new opportunities, innovative projects, and potential collaborations. 
+                I am always excited to discuss new opportunities, innovative projects, and potential collaborations. 
                 Whether you have a question about my work, want to discuss a project, or just want to say hi, 
-                I'd love to hear from you!
+                I would love to hear from you!
               </p>
 
               <div className="space-y-4">

@@ -44,7 +44,7 @@ export default function Loader() {
       clearInterval(hexInterval);
       clearInterval(progressInterval);
     };
-  }, []);
+  }, [hexGrid.length]);
 
   const createHexagonPath = () => {
     return "M30,5 L50,5 L60,21.65 L50,38.3 L30,38.3 L20,21.65 Z";

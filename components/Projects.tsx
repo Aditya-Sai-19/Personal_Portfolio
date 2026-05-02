@@ -1,18 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { link } from "fs";
 import {
   ExternalLink,
   Github,
-  Database,
   FileSearch,
   Flower2,
   Home,
   BrainCircuit,
   Link2,
   Code,
-  Link,
 } from "lucide-react";
 
 export default function Projects() {
@@ -187,18 +184,22 @@ export default function Projects() {
                         whileTap={{ scale: 0.9 }}
                         className="p-2 rounded-full bg-white/10  hover:bg-electric-cyan/20 transition-colors duration-300"
                       >
-                        <a href="https://github.com/Aditya-Sai-19">
+                        <a href="https://github.com/Aditya-Sai-19" target="_blank" rel="noopener noreferrer">
                           {" "}
                           <Github className="w-4 h-4 text-electric-cyan" />
                         </a>
                       </motion.button>
-                      <motion.button
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        className="p-2 rounded-full bg-white/10 hover:bg-electric-cyan/20 transition-colors duration-300"
-                      >
-                        <a href={project.link}><ExternalLink className="w-4 h-4 text-electric-cyan" /></a>
-                      </motion.button>
+                      {project.link && (
+                        <motion.button
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.9 }}
+                          className="p-2 rounded-full bg-white/10 hover:bg-electric-cyan/20 transition-colors duration-300"
+                        >
+                          <a href={project.link} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="w-4 h-4 text-electric-cyan" />
+                          </a>
+                        </motion.button>
+                      )}
                     </div>
                   </div>
                 </div>

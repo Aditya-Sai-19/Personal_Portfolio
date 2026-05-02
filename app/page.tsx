@@ -6,6 +6,7 @@ import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Projects from '@/components/Projects';
 import Skills from '@/components/Skills';
+import Community from '@/components/Community';
 import Certifications from '@/components/Certifications';
 import Contact from '@/components/Contact';
 import StarField from '@/components/StarField';
@@ -35,6 +36,7 @@ export default function Home() {
         <main>
           <Hero />
           <About />
+          <Community />
           <Projects />
           <Skills />
           <Certifications />

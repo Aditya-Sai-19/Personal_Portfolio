@@ -1,11 +1,28 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { link } from 'fs';
-import { Award, Calendar, ExternalLink, CheckCircle } from 'lucide-react';
+import { Award, Calendar, ExternalLink, CheckCircle, Chrome, Globe, Database } from 'lucide-react';
 
 export default function Certifications() {
   const certifications = [
+     {
+      name: 'Introduction to Agent Skills',
+      platform: 'Anthropic',
+      date: '2026',
+      category: 'AI/ML',
+      color: 'from-blue-500 to-cyan-500',
+      description: 'Learned fundamentals of AI agents, tool usage, and autonomous workflows.',
+      link: 'https://verify.skilljar.com/c/2niomiw739th'
+    },
+    {
+      name: 'Claude Code in Action',
+      platform: 'Anthropic',
+      date: 'April 2026',
+      category: 'AI/ML',
+      color: 'from-green-500 to-emerald-500',
+      description: 'Hands-on experience building AI-powered coding workflows using Claude.',
+      link: 'https://verify.skilljar.com/c/fdxfahjxy3cc'
+    },
     {
   name: 'Oracle Cloud Infrastructure 2025 Certified Generative AI Professional',
   platform: 'Oracle',
@@ -14,6 +31,51 @@ export default function Certifications() {
   color: 'from-nebula-pink to-orange-500',
   description: 'Certification demonstrating expertise in Oracle Cloud Infrastructure and Generative AI services',
   link: 'https://catalog-education.oracle.com/pls/certview/sharebadge?id=0BC5481C6D8F23D8372FE1FDE216279DEE629D205BFAF74BBBF0AA1A7E848A93'
+},
+{
+  name: 'Explore Generative AI with the Vertex AI Gemini API',
+  platform: 'Google',
+  date: 'April 2025',
+  category: 'AI/Cloud',
+  color: 'from-red-500 to-yellow-500',
+  description: 'Gained hands-on experience using Vertex AI Gemini APIs for building generative AI applications.',
+  link: 'https://www.credly.com/badges/fbc08338-501f-4fae-9136-08f9d9b1b6a9/linked_in_profile'
+},
+{
+  name: 'Build Real World AI Applications with Gemini and Imagen',
+  platform: 'Google',
+  date: 'April 2025',
+  category: 'AI/Cloud',
+  color: 'from-red-500 to-orange-500',
+  description: 'Learned to build real-world AI applications using Gemini and Imagen models.',
+  link: 'https://www.credly.com/badges/d1f3f166-c6dd-4f23-b868-02bc8caeff89/linked_in_profile'
+},
+{
+  name: 'Prompt Design in Vertex AI',
+  platform: 'Google',
+  date: 'April 2025',
+  category: 'AI/Cloud',
+  color: 'from-yellow-500 to-orange-500',
+  description: 'Developed skills in prompt engineering and designing effective prompts for Gemini models.',
+  link: 'https://www.credly.com/badges/0463ad58-3936-4dd4-b043-c0ca17b4cc12/linked_in_profile'
+},
+{
+  name: 'Intro to Machine Learning',
+  platform: 'Kaggle',
+  date: 'December 2024',
+  category: 'AI/ML',
+  color: 'from-blue-500 to-indigo-500',
+  description: 'Learned core machine learning concepts including supervised learning and model evaluation.',
+  link: 'https://www.kaggle.com/learn/certification/supremekas/intro-to-machine-learning'
+},
+{
+  name: 'Automate Cybersecurity Tasks with Python',
+  platform: 'Google',
+  date: 'December 2024',
+  category: 'Cybersecurity',
+  color: 'from-green-500 to-emerald-500',
+  description: 'Built automation scripts for cybersecurity tasks using Python and security best practices.',
+  link: 'https://www.coursera.org/account/accomplishments/verify/F3YKLODQFDYU'
 },
 {
       name: 'Automation Design & Robotics',
@@ -113,7 +175,8 @@ export default function Certifications() {
       color: 'from-nebula-pink to-orange-500',
       description: 'Digital marketing and advertising campaign management',
       link:'https://www.linkedin.com/in/aditya-sai-3317702a6/details/certifications/1725356306803/single-media-viewer/?type=DOCUMENT&profileId=ACoAAEnLrNUBtlmX5R017dHOdXAeUJe3FjIgtD4'
-    }
+    },
+   
   ];
 
   const categoryColors = {
@@ -125,12 +188,44 @@ export default function Certifications() {
   'AI/Cloud': 'text-nebula-pink' 
 };
 
+  const getPlatformIcon = (platform: string) => {
+    if (platform.includes('Google')) return Chrome;
+    if (platform.includes('Kaggle')) return Database;
+    return Globe;
+  };
+
+  const parseCertificationDate = (date: string) => {
+    const normalized = date.trim();
+
+    if (/^\d{4}$/.test(normalized)) {
+      return new Date(Number(normalized), 11, 31).getTime();
+    }
+
+    const [month, year] = normalized.split(' ');
+    if (month && year && /^\d{4}$/.test(year)) {
+      const parsed = new Date(`${month} 1, ${year}`);
+      if (!Number.isNaN(parsed.getTime())) {
+        return parsed.getTime();
+      }
+    }
+
+    const fallback = new Date(normalized);
+    return Number.isNaN(fallback.getTime()) ? 0 : fallback.getTime();
+  };
+
+  const sortedCertifications = [...certifications].sort(
+    (a, b) => parseCertificationDate(b.date) - parseCertificationDate(a.date)
+  );
+
+  const totalCertifications = certifications.length;
+  const totalPlatforms = new Set(certifications.map((cert) => cert.platform)).size;
+  const totalCategories = new Set(certifications.map((cert) => cert.category)).size;
 
   const stats = [
-    { number: '12+', label: 'Certifications', color: 'electric-cyan' },
-    { number: '5+', label: 'Platforms', color: 'neon-purple' },
-    { number: '2025', label: 'Most Recent', color: 'cosmic-orange' },
-    { number: '5+', label: 'Categories', color: 'stellar-yellow' }
+    { number: `${totalCertifications}+`, label: 'Certifications', color: 'electric-cyan' },
+    { number: `${totalPlatforms}+`, label: 'Platforms', color: 'neon-purple' },
+    { number: '2026', label: 'Most Recent', color: 'cosmic-orange' },
+    { number: `${totalCategories}+`, label: 'Categories', color: 'stellar-yellow' }
   ];
 
   return (
@@ -160,7 +255,7 @@ export default function Certifications() {
           viewport={{ once: true }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
         >
-          {stats.map((stat, index) => (
+          {stats.map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-electric-cyan/50 transition-all duration-300">
                 <div className={`text-3xl font-bold text-${stat.color} mb-2`}>
@@ -174,7 +269,10 @@ export default function Certifications() {
 
         {/* Certifications Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {certifications.map((cert, index) => (
+          {sortedCertifications.map((cert, index) => {
+            const PlatformIcon = getPlatformIcon(cert.platform);
+
+            return (
             <motion.div
               key={cert.name}
               initial={{ opacity: 0, y: 50 }}
@@ -209,7 +307,7 @@ export default function Certifications() {
                 {/* Certificate details */}
                 <div className="space-y-2 mb-4">
                   <div className="flex items-center text-gray-400 text-sm">
-                    <span className="w-2 h-2 bg-electric-cyan rounded-full mr-3"></span>
+                    <PlatformIcon className="w-4 h-4 mr-3 text-electric-cyan" />
                     <span className="font-medium text-white">{cert.platform}</span>
                   </div>
                   <div className="flex items-center text-gray-400 text-sm">
@@ -219,20 +317,24 @@ export default function Certifications() {
                 </div>
 
                 {/* Action button */}
-                <motion.button
+                <motion.a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+                  href={cert.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-electric-cyan/20 to-neon-purple/20 border border-electric-cyan/30 px-4 py-2 rounded-lg text-electric-cyan font-medium hover:border-electric-cyan/50 transition-all duration-300"
                 >
                   <ExternalLink className="w-4 h-4" />
-                  <a href={cert.link}>View Certificate</a>
-                </motion.button>
+                  <span>View Certificate ↗</span>
+                </motion.a>
 
                 {/* Hover effect overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-electric-cyan/0 to-neon-purple/0 group-hover:from-electric-cyan/5 group-hover:to-neon-purple/5 rounded-xl transition-all duration-300 pointer-events-none"></div>
               </div>
             </motion.div>
-          ))}
+          );
+          })}
         </div>
 
         {/* Achievement Summary */}

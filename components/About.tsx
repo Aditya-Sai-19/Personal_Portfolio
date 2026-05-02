@@ -61,7 +61,7 @@ export default function About() {
                 The Journey
               </h3>
               <p className="text-gray-300 leading-relaxed" data-macaly="about-description">
-                I'm Kolapalli Aditya Sai, a Computer Science graduate specializing in CSE(AI & ML) Artificial Intelligence and Machine Learning. My journey is driven by a passion for building intelligent systems that bridge the physical and digital worlds, from developing secure infrastructures to pioneering robotic automation. With a strong foundation in Python and deep learning, I'm eager to contribute my problem-solving skills to innovative, tech-driven teams.
+                I am Kolapalli Aditya Sai, a Computer Science graduate specializing in CSE(AI & ML) Artificial Intelligence and Machine Learning. My journey is driven by a passion for building intelligent systems that bridge the physical and digital worlds, from developing secure infrastructures to pioneering robotic automation. With a strong foundation in Python and deep learning, I am eager to contribute my problem-solving skills to innovative, tech-driven teams.
               </p>
             </div>
 
@@ -71,7 +71,7 @@ export default function About() {
                 The Vision
               </h3>
               <p className="text-gray-300 leading-relaxed">
-                My journey is driven by curiosity and a desire to innovate. I thrive in environments where I can solve real-world problems, collaborate with forward-thinking teams, and continuously expand my technical and creative boundaries. With hands-on experience in Python, Java, C, and SQL, I'm eager to contribute to cutting-edge solutions in AI, robotics, and cybersecurity.
+                My journey is driven by curiosity and a desire to innovate. I thrive in environments where I can solve real-world problems, collaborate with forward-thinking teams, and continuously expand my technical and creative boundaries. With hands-on experience in Python, Java, C, and SQL, I am eager to contribute to cutting-edge solutions in AI, robotics, and cybersecurity.
               </p>
             </div>
 
@@ -81,14 +81,14 @@ export default function About() {
                 Beyond Code
               </h3>
               <p className="text-gray-300 leading-relaxed">
-                When I'm not coding or experimenting with new tech, I'm exploring the latest in ethical hacking, UI/UX design, and smart automation. I believe in lifelong learning, and my certifications reflect a commitment to staying ahead in a rapidly evolving tech landscape.
+                When I am not coding or experimenting with new tech, I am exploring the latest in ethical hacking, UI/UX design, and smart automation. I believe in lifelong learning, and my certifications reflect a commitment to staying ahead in a rapidly evolving tech landscape.
               </p>
             </div>
           </div>
 
           {/* Right column - Highlights grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {highlights.map((highlight, index) => (
+            {highlights.map((highlight) => (
               <div key={highlight.title} className="group relative">
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-electric-cyan/50 transition-all duration-300 hover:transform hover:scale-105 h-full">
                   <div className={`w-12 h-12 rounded-lg ${highlight.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
