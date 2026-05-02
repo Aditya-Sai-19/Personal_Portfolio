@@ -32,7 +32,7 @@ export default function Hero() {
       <div className="container mx-auto text-center relative z-10">
         <div className="mb-8">
           <div className="text-electric-cyan text-lg mb-4 font-mono" data-macaly="hero-greeting">
-            &gt; System.out.println("Hello, Universe!");
+            &gt; System.out.println(&quot;Hello, Universe!&quot;);
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-electric-cyan via-neon-purple to-cosmic-orange bg-clip-text text-transparent" data-macaly="hero-name">
