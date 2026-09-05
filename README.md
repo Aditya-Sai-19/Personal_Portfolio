@@ -1,4 +1,4 @@
-# Personal Portfolio (Next.js)
+# Vibe Coded Portfolio (Next.js)
 
 This repository contains a single-page personal portfolio application built with Next.js App Router, React, TypeScript, Tailwind CSS, and Framer Motion.
 
